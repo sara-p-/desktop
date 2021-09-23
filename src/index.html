@@ -1,13 +1,76 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title>Desktop</title>
+    <script
+      src="https://kit.fontawesome.com/d2d9bdc7cf.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <div>
-      <h1><%= htmlWebpackPlugin.options.title %></h1>
- 
-      <div id="app">
-    </div>
+    <header class="header">
+      <div class="header__wrapper">
+        <nav class="nav">
+          <ul class="nav__items">
+            <li class="nav__item logo">
+              <button class="icon heart">
+                <span class="visually-hidden">Heart</span>
+                <i class="fas fa-heart"></i>
+              </button>
+            </li>
+            <li class="nav__item submenu">
+              <button class="nav__link submenu__button">File</button>
+              <ul class="nav__items submenu__items">
+                <li class="nav__item submenu__item item--border-bottom">
+                  <button
+                    class="nav__link submenu__link nav-action__new-folder"
+                  >
+                    New folder
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <li class="nav__item submenu">
+              <button class="nav__link submenu__button">Edit</button>
+              <ul class="nav__items submenu__items">
+                <li class="nav__item submenu__item item--border-bottom">
+                  <button class="nav__link submenu__link nav-action__find">
+                    Find
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="section--fullscreen">
+        <div class="section__wrapper">
+          <div class="section__items--grid grid--column grid--100px">
+            <div class="section__item folder">
+              <div class="section__image folder__image">
+                <img
+                  class="image--contain"
+                  src="./assets/images/folder.svg"
+                  alt="folder"
+                />
+              </div>
+              <p class="h6 folder__title">Folder Title</p>
+            </div>
+            <div class="section__item folder">
+              <div class="section__image folder__image">
+                <img
+                  class="image--contain"
+                  src="./assets/images/folder.svg"
+                  alt="folder"
+                />
+              </div>
+              <p class="h6 folder__title">Folder Title</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

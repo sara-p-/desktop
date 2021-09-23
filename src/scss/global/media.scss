@@ -1,0 +1,16 @@
+@use './variables.scss' as *;
+@use './mixins.scss' as *;
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.image {
+  &__contain {
+    object-fit: contain;
+  }
+  &__cover {
+    object-fit: cover;
+  }
+}

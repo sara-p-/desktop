@@ -1,9 +1,2 @@
-h1 {
-  color: red;
-  display: flex;
-  display: -webkit-box;
-
-  &:hover {
-    color: blue;
-  }
-}
+@use 'global/global-base';
+@use 'partials/partials-base';

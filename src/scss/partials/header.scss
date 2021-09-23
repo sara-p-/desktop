@@ -1,0 +1,13 @@
+@use "../global/variables.scss" as *;
+@use "../global/mixins.scss" as *;
+
+header {
+  background: $light-grey;
+  ul {
+    @include clear-list;
+  }
+  button {
+    @include clear-btn;
+    cursor: pointer;
+  }
+}

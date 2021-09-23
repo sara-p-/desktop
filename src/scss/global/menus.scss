@@ -1,0 +1,43 @@
+@use './variables.scss' as *;
+@use './mixins.scss' as *;
+
+.nav {
+  &__item {
+    display: inline-block;
+    padding: 3px 10px;
+  }
+}
+
+.submenu {
+  $self: &;
+  position: relative;
+  &__items {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  &__item {
+    width: 300px;
+    background: lighten($light-grey, 10%);
+  }
+  &--active {
+    @extend .submenu;
+    background: $blue;
+    .submenu__button {
+      color: $white;
+    }
+    #{$self}__items {
+      display: block;
+    }
+    #{$self}__item:hover {
+      background: lighten($blue, 30%);
+    }
+  }
+}
+
+.item {
+  &--border-bottom {
+    border-bottom: 1px solid lighten($grey, 10%);
+  }
+}
