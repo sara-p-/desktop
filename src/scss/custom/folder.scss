@@ -1,0 +1,17 @@
+@use '../global/variables.scss' as *;
+@use '../global/mixins.scss' as *;
+
+.folder {
+  &__image {
+    padding: $spacing-8;
+  }
+  &__title {
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 1;
+  }
+}
+
+input.folder__title {
+  @include clear-input;
+}

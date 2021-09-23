@@ -11,16 +11,6 @@
 .submenu {
   $self: &;
   position: relative;
-  &__items {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-  }
-  &__item {
-    width: 300px;
-    background: lighten($light-grey, 10%);
-  }
   &--active {
     @extend .submenu;
     background: $blue;
@@ -30,9 +20,23 @@
     #{$self}__items {
       display: block;
     }
-    #{$self}__item:hover {
+  }
+  &__items {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  &__item {
+    width: 300px;
+    background: lighten($light-grey, 10%);
+    &:hover {
       background: lighten($blue, 30%);
     }
+  }
+  &__link {
+    width: 100%;
+    text-align: left;
   }
 }
 

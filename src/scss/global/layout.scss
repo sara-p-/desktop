@@ -62,7 +62,7 @@ main {
     &--grid {
       @extend .section__items;
       display: grid;
-      gap: 30px;
+      gap: $spacing-16;
     }
   }
   &__image {

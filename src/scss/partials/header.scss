@@ -6,8 +6,4 @@ header {
   ul {
     @include clear-list;
   }
-  button {
-    @include clear-btn;
-    cursor: pointer;
-  }
 }

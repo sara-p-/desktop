@@ -60,6 +60,14 @@
   padding: 0;
 }
 
+@mixin clear-input() {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
 @mixin clear-btn() {
   position: relative;
   top: auto;
@@ -69,7 +77,7 @@
   height: auto;
   padding: 0;
   font-size: $base-font-size;
-  line-height: $base-line-height;
+  line-height: 1;
   background: transparent;
   border: none;
   color: $base-font-color;

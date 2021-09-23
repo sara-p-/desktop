@@ -21,6 +21,9 @@
             <li class="nav__item submenu">
               <button class="nav__link submenu__button">File</button>
               <ul class="nav__items submenu__items">
+                <!-- <li class="nav__link submenu__link visually-hidden">
+                  <button class="nav__skip-link">Skip Submenu</button>
+                </li> -->
                 <li class="nav__item submenu__item item--border-bottom">
                   <button
                     class="nav__link submenu__link nav-action__new-folder"
@@ -47,26 +50,28 @@
     <main>
       <section class="section--fullscreen">
         <div class="section__wrapper">
-          <div class="section__items--grid grid--column grid--100px">
+          <div
+            class="section__items section__items--grid grid--column grid--100px"
+          >
             <div class="section__item folder">
-              <div class="section__image folder__image">
+              <button class="folder__button">
                 <img
-                  class="image--contain"
-                  src="./assets/images/folder.svg"
+                  class="folder__image"
+                  src="<%=require('./assets/images/folder.svg')%>"
                   alt="folder"
                 />
-              </div>
-              <p class="h6 folder__title">Folder Title</p>
+                <input type="text" class="folder__title" value="Folder Title" />
+              </button>
             </div>
             <div class="section__item folder">
-              <div class="section__image folder__image">
+              <button class="folder__button">
                 <img
-                  class="image--contain"
-                  src="./assets/images/folder.svg"
+                  class="folder__image"
+                  src="<%=require('./assets/images/folder.svg')%>"
                   alt="folder"
                 />
-              </div>
-              <p class="h6 folder__title">Folder Title</p>
+                <input type="text" class="folder__title" value="Folder Title" />
+              </button>
             </div>
           </div>
         </div>
