@@ -1,7 +1,12 @@
 @use './variables.scss' as *;
 @use './mixins.scss' as *;
 
+// Global Menus
 .nav {
+  background: $light-grey;
+  &__items {
+    @include clear-list;
+  }
   &__item {
     display: inline-block;
     padding: 3px 10px;
@@ -43,5 +48,18 @@
 .item {
   &--border-bottom {
     border-bottom: 1px solid lighten($grey, 10%);
+  }
+}
+
+// Custom Menu (Right-click Menu)
+.nav-custom {
+  display: none;
+  position: absolute;
+  top: 500px;
+  &--active {
+    display: block;
+  }
+  &__item {
+    @extend .submenu__item;
   }
 }

@@ -1,4 +1,4 @@
-import { htmlFolder } from './html-components'
+import { htmlFolder } from '../html-components'
 
 export default function newFile() {
   // Variables

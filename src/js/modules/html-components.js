@@ -1,4 +1,4 @@
-import folderSVG from '../../../assets/images/folder.svg'
+import folderSVG from '../../assets/images/folder.svg'
 
 export function htmlFolder() {
   const folder = document.createElement('div')
