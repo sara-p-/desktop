@@ -1,13 +1,13 @@
-import { htmlFolder } from '../html-components'
+import { htmlFolder } from './html-components'
+export const folderList = document.querySelector('.section__items')
 
 export function newFile() {
   // Variables
   const newFolderButton = document.querySelector('.nav-action__new-folder')
-  const FolderList = document.querySelector('.section__items')
 
   // Functions
   newFolderButton.addEventListener('click', (e) => {
-    FolderList.append(htmlFolder())
+    folderList.append(htmlFolder())
   })
 }
 
@@ -17,4 +17,9 @@ export function deleteTarget(target) {
   } else {
     target.remove()
   }
+}
+
+export function duplicateTarget(target) {
+  const newTarget = target.parentElement.cloneNode(true)
+  return newTarget
 }

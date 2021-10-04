@@ -53,13 +53,44 @@
 
 // Custom Menu (Right-click Menu)
 .nav-custom {
+  $self: &;
   display: none;
   position: absolute;
-  top: 500px;
   &--active {
     display: block;
   }
+  &__items {
+    @extend .nav__items;
+  }
   &__item {
     @extend .submenu__item;
+    @extend .nav__item;
+  }
+  &__link {
+    @extend .submenu__link;
+  }
+  .item-type {
+    &__folder {
+      display: none;
+    }
+  }
+  &.target-folder {
+    .item-type__folder {
+      display: block;
+    }
+  }
+}
+
+// Finder Nav
+.finder {
+  &__nav {
+    height: 100%;
+    button {
+      font-size: 12px;
+    }
+    &--left {
+      @extend .finder__nav;
+      background: lighten($light-grey, 12%);
+    }
   }
 }

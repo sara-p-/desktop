@@ -1,7 +1,12 @@
 @use './variables.scss' as *;
 @use './mixins.scss' as *;
 
-button {
+.button {
   @include clear-btn;
   cursor: pointer;
+  &--full-width {
+    @extend .button;
+    width: 100%;
+    text-align: left;
+  }
 }

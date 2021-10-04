@@ -39,18 +39,23 @@ main {
   }
 }
 
-.section {
-  $self: &;
+.section,
+.modal,
+.finder {
   &--fullscreen {
     @include fullscreen;
     padding: $spacing-24 0;
-    #{$self}__wrapper,
-    #{$self}__items {
+    .section__wrapper,
+    .section__items {
       @include fullscreen;
     }
   }
   &__row {
     @include flex;
+    &--grid {
+      @extend .section__row;
+      display: grid;
+    }
   }
   &__col {
     flex: 1;
@@ -93,5 +98,18 @@ main {
   }
   &--column {
     grid-auto-flow: column;
+  }
+}
+
+// Alignment
+.text-align {
+  &--left {
+    text-align: left;
+  }
+  &--center {
+    text-align: center;
+  }
+  &--right {
+    text-align: right;
   }
 }

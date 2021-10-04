@@ -2,8 +2,13 @@
 @use "../global/mixins.scss" as *;
 
 header {
-  background: $light-grey;
   ul {
     @include clear-list;
+  }
+  li {
+    display: inline-block;
+  }
+  &.header {
+    background: $light-grey;
   }
 }

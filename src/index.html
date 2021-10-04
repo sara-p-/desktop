@@ -6,6 +6,7 @@
       src="https://kit.fontawesome.com/d2d9bdc7cf.js"
       crossorigin="anonymous"
     ></script>
+    <!-- <script src="plain-draggable.min.js"></script> -->
   </head>
   <body>
     <header class="header">
@@ -13,20 +14,25 @@
         <nav class="nav">
           <ul class="nav__items">
             <li class="nav__item logo">
-              <button class="icon heart">
+              <button class="button icon heart">
                 <span class="visually-hidden">Heart</span>
                 <i class="fas fa-heart"></i>
               </button>
             </li>
             <li class="nav__item submenu">
-              <button class="nav__link submenu__button">File</button>
+              <button class="button nav__link submenu__button">File</button>
               <ul class="nav__items submenu__items">
                 <!-- <li class="nav__link submenu__link visually-hidden">
                   <button class="nav__skip-link">Skip Submenu</button>
                 </li> -->
                 <li class="nav__item submenu__item item--border-bottom">
                   <button
-                    class="nav__link submenu__link nav-action__new-folder"
+                    class="
+                      button
+                      nav__link
+                      submenu__link
+                      nav-action__new-folder
+                    "
                   >
                     New folder
                   </button>
@@ -34,11 +40,25 @@
               </ul>
             </li>
             <li class="nav__item submenu">
-              <button class="nav__link submenu__button">Edit</button>
+              <button class="button nav__link submenu__button">Edit</button>
               <ul class="nav__items submenu__items">
                 <li class="nav__item submenu__item item--border-bottom">
-                  <button class="nav__link submenu__link nav-action__find">
+                  <button
+                    class="button nav__link submenu__link nav-action__find"
+                  >
                     Find
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <li class="nav__item submenu">
+              <button class="button nav__link submenu__button">View</button>
+              <ul class="nav__items submenu__items">
+                <li class="nav__item submenu__item item--border-bottom">
+                  <button
+                    class="button nav__link submenu__link nav-action__clean-up"
+                  >
+                    Clean up
                   </button>
                 </li>
               </ul>
@@ -48,13 +68,13 @@
       </div>
     </header>
     <main>
-      <section class="section--fullscreen">
+      <section class="section--fullscreen desktop">
         <div class="section__wrapper">
           <div
             class="section__items section__items--grid grid--column grid--100px"
           >
             <div class="section__item folder">
-              <button class="folder__button">
+              <button class="button folder__button">
                 <img
                   class="folder__image"
                   src="<%=require('./assets/images/folder.svg')%>"
@@ -64,7 +84,7 @@
               </button>
             </div>
             <div class="section__item folder">
-              <button class="folder__button">
+              <button class="button folder__button">
                 <img
                   class="folder__image"
                   src="<%=require('./assets/images/folder.svg')%>"
@@ -77,16 +97,69 @@
         </div>
       </section>
     </main>
+    <!-- Right Click Menu -->
+    <nav class="nav nav-custom">
+      <ul class="nav__items nav-custom__items">
+        <li class="nav__item nav-custom__item item-type__folder">
+          <button class="button nav__link nav-custom__link nav-action__delete">
+            Delete
+          </button>
+        </li>
+        <li class="nav__item nav-custom__item item-type__folder">
+          <button
+            class="button nav__link nav-custom__link nav-action__duplicate"
+          >
+            Duplicate
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <!-- Folder Modal -->
+    <div id="modal-1" class="modal finder" aria-hidden="true">
+      <div tabindex="-1" class="finder__wrapper" data-micromodal-close>
+        <div class="finder__container">
+          <header class="finder__header">
+            <nav class="finder__nav">
+              <ul class="finder__items finder__controls">
+                <li class="finder__item finder__close">
+                  <button
+                    aria-label="Close modal"
+                    data-micromodal-close
+                  ></button>
+                </li>
+              </ul>
+              <ul class="finder__items--flex">
+                <li class="finder__item finder__title">
+                  <h1 class="h6 no-margin" id="modal-1-title">Modal Title</h1>
+                </li>
+              </ul>
+            </nav>
+          </header>
+          <div
+            role="dialog"
+            class="finder__row--grid"
+            aria-modal="true"
+            aria-labelledby="modal-1-title"
+          >
+            <div class="finder__col">
+              <nav class="finder__nav">
+                <ul class="finder__items">
+                  <li class="finder__item">
+                    <button class="button--full-width">Desktop</button>
+                  </li>
+                  <li class="finder__item">
+                    <button class="button">Desktop</button>
+                  </li>
+                  <li class="finder__item">
+                    <button class="button">Desktop</button>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="finder__col"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
-
-  <!-- Right Click Menu -->
-  <nav class="nav nav-custom">
-    <ul class="nav__items nav-custom__items">
-      <li class="nav__item nav-custom__item">
-        <button class="nav__link nav-custom__link nav-action__delete">
-          Delete
-        </button>
-      </li>
-    </ul>
-  </nav>
 </html>
